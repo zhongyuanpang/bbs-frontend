@@ -1,0 +1,184 @@
+@media screen and (min-width: 827px) and (max-width: 920px) {
+  .login {
+    .show_info{
+      display: none !important;
+    }
+  }
+
+  .code {
+    width: 110px !important;
+  }
+
+  .getcode {
+    width: 100px !important;
+  }
+}
+
+@media screen and (min-width: 723px) and (max-width: 826px) {
+  .login {
+    width: 700px !important;
+    .show_info{
+      display: none !important;
+    }
+  }
+
+  .code {
+    width: 350px !important;
+  }
+
+  .getcode {
+    width: 100px !important;
+
+  }
+
+  .input {
+    width: 250px !important;
+  }
+}
+
+@media screen and (min-width: 731px) and (max-width: 768px) {
+  .login {
+    width: 600px !important;
+    .show_info{
+      display: none !important;
+    }
+  }
+
+  .show_info {
+    width: 300px;
+  }
+
+  .registerForm {
+    padding: 0px 20px !important;
+  }
+}
+
+@media screen and (min-width: 630px) and (max-width: 731px) {
+  .login {
+    width: 500px !important;
+    .show_info{
+      display: none !important;
+    }
+  }
+
+  .show_info {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 10px) and (max-width: 630px) {
+  .login {
+    width: 350px !important;
+    padding: 0 !important;
+    .show_info{
+      display: none !important;
+    }
+  }
+
+  .show_info {
+    display: none;
+  }
+
+  .input {
+    width: 250px !important;
+  }
+
+  .login_btn {
+    width: 250px !important;
+  }
+
+  .code {
+    width: 100px !important;
+  }
+
+  .getcode {
+    width: 100px !important;
+  }
+
+  .registerForm {
+    padding: 0px !important;
+  }
+}
+
+.input {
+  width: 300px;
+}
+
+.loginBtn {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.registerBtn {
+  width: 100%;
+}
+
+.login_box {
+  min-height: 100vh;
+  //background-image: url("~/images/login/loginBG.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .login {
+    height: 500px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+
+    .show_info {
+      // background: rgba(0, 0, 0, 0.4);
+      // background-image: url(http://p7.qhimg.com/bdm/1024_768_85/t01dad620ed7885bc47.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      left: 0px;
+      width: 100%;
+      z-index: 0 !important;
+      background-position: center center;
+      object-fit: cover;
+      color: white;
+      display: flex;
+      padding-right: 80px;
+      padding-top: 70px;
+    }
+
+    .login_in {
+      background-color: #fff;
+
+      .tab {
+        margin: 20px;
+        height: 350px;
+
+        //登录tab
+        .login_form {
+          padding: 50px 20px 0px 20px;
+        }
+
+        // 注册form表单
+        .registerForm {
+          font-size: 0.7em !important;
+          padding: 0px 30px;
+
+          .code {
+            width: 130px;
+          }
+
+          .getcode {
+            width: 120px;
+            text-align: center !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+///deep/.el-form-item__label {
+//  font-size: 0.7em;
+//}
