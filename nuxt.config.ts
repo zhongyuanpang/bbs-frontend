@@ -5,7 +5,6 @@ export default defineNuxtConfig({
         port: 3527 // 你可以根据需要修改端口号。
     },
     modules:[
-        // '@nuxtjs/axios',
         // {proxyHeaders:false}
     ],
     css:[
