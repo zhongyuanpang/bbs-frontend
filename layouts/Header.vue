@@ -13,6 +13,7 @@
                 <NuxtLink :to="{name:'home'}" :class="{ active : isActive == 0 }" v-on:click.native="isactive(0)">江湖</NuxtLink>
                 <NuxtLink :to="{name:'about'}" :class="{ active : isActive == 2 }" v-on:click.native="isactive(2)">关于</NuxtLink>
                 <NuxtLink :to="{name:'ai'}" :class="{ active : isActive == 3 }" v-on:click.native="isactive(3)">AI</NuxtLink>
+                <NuxtLink :to="{name:'ai-tool'}" :class="{ active : isActive == 4 }" v-on:click.native="isactive(4)">AI工具</NuxtLink>
             </div>
         </div>
 

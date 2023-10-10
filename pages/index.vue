@@ -1,3 +1,43 @@
+<script setup lang='ts'>
+// import { switchImg} from '@/api/index'
+import {ref,onMounted,onBeforeUnmount} from 'vue'
+
+definePageMeta({
+  layout: "custom",
+});
+// 键盘按下c键总数
+const num = ref<number>(0)
+
+// 背景图片
+let bgImg = ref<string>("https://pic5.58cdn.com.cn/nowater/webim/big/n_v24a973e9eb1094e41ba72d15a43d5c0f8.png")
+const islogin = ref(null)
+
+onMounted(()=>{
+  if(localStorage.getItem("bgImg")){
+    bgImg.value = localStorage.getItem("bgImg")
+  }
+  // window.addEventListener("keydown", this.clickOther);
+})
+
+onBeforeUnmount(()=>{
+  // this.num = 0;
+  // window.removeEventListener('keydown', this.clickOther);
+})
+
+function clickOther(event: { keyCode: number; }) {
+  if(event.keyCode == 67){
+    num.value++;
+    if(num.value === 5){
+      num.value = 0
+      // switchImg().then(res=>{
+      //   this.bgImg = res.data
+      //   localStorage.setItem("bgImg",res.data)
+      // })
+    }
+  }
+}
+</script>
+
 <template>
     <div class="container-fluid index_box" :style="{'background-image': 'url('+ bgImg +')'}">
         <div class="welcome_box container">
@@ -39,51 +79,6 @@
         </div>
     </div>
 </template>
-
-<script>
-// import { switchImg} from '@/api/index'
-definePageMeta({
-    layout: "custom",
-});
-export default {
-    name:'index',
-    data(){
-        return{
-            // 键盘按下c键总数
-            num:0,
-            // 背景图片
-               bgImg:null,
-            islogin:null
-        }
-    },
-    mounted(){
-        if(localStorage.getItem("bgImg") == "" || localStorage.getItem("bgImg") == undefined){
-            this.bgImg = "https://pic4.58cdn.com.cn/nowater/webim/big/n_v2de74646f6a2c4900930636be8584feb9.jpg"
-        }else{
-            this.bgImg = localStorage.getItem("bgImg")
-        }
-        // window.addEventListener("keydown", this.clickOther);
-    },
-    methods:{
-        clickOther(e) {
-            if(e.keyCode == 67){
-                this.num++;
-                if(this.num == 5){
-                   this.num = 0
-                   switchImg().then(res=>{
-                      this.bgImg = res.data
-                      localStorage.setItem("bgImg",res.data)
-                   })
-                }
-            }
-        }
-    },
-    beforeDestroy() {  // 实例销毁之前对点击事件进行解绑
-      // this.num = 0;
-      // window.removeEventListener('keydown', this.clickOther);
-    }
-}
-</script>
 
 <style lang="scss" scoped>
 @import "~/assets/styles/pages/index/index.scss";
